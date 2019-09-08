@@ -22,11 +22,11 @@ Name of accessory: `shelly`
  
 |        Parameter       |                                     Description                                     | Required |
 | -----------------------| ----------------------------------------------------------------------------------- |:--------:|
-| `name`                 | name of the accessory (also taken to call in "Siri")                                                              |     ✓    |
-| `url`                  | url of the shelly device                                        |     ✓    |
-| `channel`     | *default* `0` <br> (later with Shelly2 planned for `0` or `1`)                                                                  |          |
-| `username`     | *default* `admin` |          |
-| `password`             | password for request (no username, because `admin` as default) - in case this attribute is provided, the access is done via security mode                                                          |          |
+| `name`                 | name of the accessory (also taken to call in "Siri") |     ✓    |
+| `url`                  | url of the shelly device |     ✓    |
+| `channel`     | *default* `0` <br> (Shelly2 as two channels, `0` or `1`) |          |
+| `username`     | if authentication is enabled on the Shelly, provide an username <br> *default* `admin` |          |
+| `password`             | if authentication is enabled on the Shelly, provide a password |          |
 
 Example of configuration:
 
