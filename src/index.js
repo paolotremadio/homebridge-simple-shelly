@@ -45,7 +45,7 @@ class SimpleShelly {
 
   async setOn(on, callback) {
     debug('setOn()', { on });
-    this.log('Setting Shelly', { on });
+    this.log('Setting', { on });
 
     try {
       // Set status
@@ -74,6 +74,9 @@ class SimpleShelly {
         .getCharacteristic(Characteristic.On)
         .updateValue(isOn);
 
+      if (this.lastState !== isOn) {
+        this.log('State changed', { previousState: this.lastState, currentState: isOn });
+      }
       this.lastState = isOn;
     } catch (error) {
       this.log('Could not update state.', error.toString());
