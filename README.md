@@ -14,12 +14,8 @@ Then run the following command to install `homebridge-simple-shelly`:
 sudo npm install -g homebridge-simple-shelly
 ```
 
-## Configuration Params
+## Configuration
 
-In your central configuration `config.json` of your homebridge environment you can configure this plugin as a normal accessory.
-
-Name of accessory: `shelly`
- 
 |        Parameter       |                                     Description                                     | Required |
 | -----------------------| ----------------------------------------------------------------------------------- |:--------:|
 | `name`                 | name of the accessory (also taken to call in "Siri") |     ✓    |
