@@ -94,9 +94,11 @@ class SimpleShelly {
 
       if (isOn && this.autoOff) {
         debug('setState(): setting auto-off timer');
+        this.log(`Auto turn off: starting a timer for ${this.autoOff} seconds`);
 
         this.autoOffTimer = setTimeout(() => {
           debug('setState(): auto-off timer ran out, turning off');
+          this.log('Auto turn off: time is up, turning off');
           this.setState(false);
         }, this.autoOff * 1000);
       }
